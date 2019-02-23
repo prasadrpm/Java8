@@ -76,6 +76,7 @@ public class SampleLambdas {
 		e5.setEmp_type(EmployeeType.Permanent.toString());
 		e5.setSex(SexType.Female.toString());
 		employeeList.add(e5);
+		employeeList.add(e5);
 		
 		System.out.println("Construction of Employee List done");
 
@@ -113,8 +114,19 @@ public class SampleLambdas {
 		for (Employee e : lambdas.getEmployeeList()) {
 			System.out.println(e);
 		}*/
-		System.out.println("--------------");
+		System.out.println("--------------sequential Stream------------");
+		Long start = System.currentTimeMillis();
 		System.out.println(lambdas.employeeList.stream().filter(EmployeePredicate.employeeTypePredicate()).collect(Collectors.toList()));
+		Long end = System.currentTimeMillis();
+		System.out.println("Sequential Time Taken --->"+String.valueOf(end-start));
+
+		System.out.println("--------------ParalllelStream---------");
+		Long start1 = System.currentTimeMillis();
+		System.out.println(lambdas.employeeList.parallelStream().filter(EmployeePredicate.employeeTypePredicate()).collect(Collectors.toList()));
+		Long end1 = System.currentTimeMillis();
+		System.out.println("ParalllelStream Time Taken --->"+String.valueOf(end1-start1));
+
+		
 		
 		//Output
 		//[{id-->1051068 fistName-->Arunprasad LastName-->A phoneNumber-->+91 9600328257}, {id-->1051066 fistName-->Prasad LastName-->A phoneNumber-->+91 9600328259}, {id-->10510 fistName-->Janani LastName-->A phoneNumber-->+91 9600328277}]
@@ -124,6 +136,12 @@ public class SampleLambdas {
 		//Output
 		//[{id-->10510 fistName-->Janani LastName-->A phoneNumber-->+91 9600328277}]
 
-		
+		System.out.println("--------------Distinct---------");
+
+		//Distinct
+		lambdas.employeeList.stream().distinct().forEach(System.out::println);
+
+/*		Dublicate of Employee 'Janani' will removed from Stream
+		{id-->10510 fistName-->Janani LastName-->A phoneNumber-->+91 9600328277}*/
 	}
 }
