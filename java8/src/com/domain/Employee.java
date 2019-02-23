@@ -14,6 +14,8 @@ public class Employee implements Comparable<Employee>{
 
 	private String emp_type;
 	
+	private String sex;
+	
 	public String getId() {
 		return id;
 	}
@@ -51,6 +53,13 @@ public class Employee implements Comparable<Employee>{
 	}
 	public void setEmp_type(String emp_type) {
 		this.emp_type = emp_type;
+	}
+	
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
 	}
 	
 	@Override
