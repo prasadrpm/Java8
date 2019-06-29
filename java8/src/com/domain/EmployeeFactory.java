@@ -18,6 +18,7 @@ public class EmployeeFactory {
 		e1.setPhone_Number("+91 9600328257");
 		e1.setEmp_type(EmployeeType.Permanent.toString());
 		e1.setSex(SexType.Male.toString());
+		e1.setAge(28);
 		employeeList.add(e1);
 
 		Employee e2 = new Employee();
@@ -27,6 +28,8 @@ public class EmployeeFactory {
 		e2.setPhone_Number("+91 9600328259");
 		e2.setEmp_type(EmployeeType.Permanent.toString());
 		e2.setSex(SexType.Male.toString());
+		e2.setAge(29);
+
 		employeeList.add(e2);
 
 		Employee e3 = new Employee();
@@ -36,6 +39,8 @@ public class EmployeeFactory {
 		e3.setPhone_Number("+91 9600328267");
 		e3.setEmp_type(EmployeeType.Temporary.toString());
 		e3.setSex(SexType.Male.toString());
+		e3.setAge(30);
+
 		employeeList.add(e3);
 
 		Employee e4 = new Employee();
@@ -45,6 +50,7 @@ public class EmployeeFactory {
 		e4.setPhone_Number("+91 9600328287");
 		e4.setEmp_type(EmployeeType.Temporary.toString());
 		e4.setSex(SexType.Male.toString());
+		e4.setAge(22);
 		employeeList.add(e4);
 
 		Employee e5 = new Employee();
@@ -54,6 +60,8 @@ public class EmployeeFactory {
 		e5.setPhone_Number("+91 9600328277");
 		e5.setEmp_type(EmployeeType.Permanent.toString());
 		e5.setSex(SexType.Female.toString());
+		e5.setAge(25);
+
 		employeeList.add(e5);
 		
 		
@@ -64,6 +72,8 @@ public class EmployeeFactory {
 		e6.setPhone_Number("+91 9600328277");
 		e6.setEmp_type(EmployeeType.Permanent.toString());
 		e6.setSex(SexType.Female.toString());
+		e6.setAge(45);
+
 		employeeList.add(e6);
 		
 		return employeeList;
@@ -79,6 +89,7 @@ public class EmployeeFactory {
 		e1.setPhone_Number("+91 9600328257");
 		e1.setEmp_type(EmployeeType.Permanent.toString());
 		e1.setSex(SexType.Male.toString());
+		e1.setAge(28);
 		empMap.put("1051068", e1);
 
 		Employee e2 = new Employee();
@@ -88,6 +99,7 @@ public class EmployeeFactory {
 		e2.setPhone_Number("+91 9600328259");
 		e2.setEmp_type(EmployeeType.Permanent.toString());
 		e2.setSex(SexType.Male.toString());
+		e2.setAge(29);
 		empMap.put("1051066", e2);
 
 		Employee e3 = new Employee();
@@ -97,6 +109,8 @@ public class EmployeeFactory {
 		e3.setPhone_Number("+91 9600328267");
 		e3.setEmp_type(EmployeeType.Temporary.toString());
 		e3.setSex(SexType.Male.toString());
+		e3.setAge(30);
+
 		empMap.put("1051070", e3);
 
 		Employee e4 = new Employee();
@@ -106,6 +120,8 @@ public class EmployeeFactory {
 		e4.setPhone_Number("+91 9600328287");
 		e4.setEmp_type(EmployeeType.Temporary.toString());
 		e4.setSex(SexType.Male.toString());
+		e4.setAge(24);
+
 		empMap.put("1051071", e4);
 
 		Employee e5 = new Employee();
@@ -115,6 +131,8 @@ public class EmployeeFactory {
 		e5.setPhone_Number("+91 9600328277");
 		e5.setEmp_type(EmployeeType.Permanent.toString());
 		e5.setSex(SexType.Female.toString());
+		e5.setAge(40);
+
 		empMap.put("10510", e5);
 		
 		
@@ -125,6 +143,8 @@ public class EmployeeFactory {
 		e6.setPhone_Number("+91 9600328277");
 		e6.setEmp_type(EmployeeType.Permanent.toString());
 		e6.setSex(SexType.Female.toString());
+		e6.setAge(38);
+
 		empMap.put("105100", e6);
 		
 		

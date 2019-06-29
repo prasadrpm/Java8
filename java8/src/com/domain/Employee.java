@@ -1,5 +1,7 @@
 package com.domain;
 
+import java.util.StringJoiner;
+
 public class Employee implements Comparable<Employee>{
 //public class Employee {
 
@@ -15,6 +17,8 @@ public class Employee implements Comparable<Employee>{
 	private String emp_type;
 	
 	private String sex;
+
+	private Integer age;
 	
 	public String getId() {
 		return id;
@@ -61,12 +65,25 @@ public class Employee implements Comparable<Employee>{
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
-	
+
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
 	@Override
 	public String toString() {
-		
-		return "{id-->"+this.id+" fistName-->"+this.first_Name+
-				" LastName-->"+this.last_Name+" phoneNumber-->"+this.phone_Number+"}";
+		StringJoiner sj = new StringJoiner(",","{","}");
+		sj.add("id: ").add(this.id).add("firstName : ").add(this.first_Name).
+				add("LastName : ").add(this.last_Name).add("Phone Number : ").add(this.phone_Number).
+				add("Age : ").add(this.age.toString());
+
+
+		return sj.toString();
 	}
 
 
