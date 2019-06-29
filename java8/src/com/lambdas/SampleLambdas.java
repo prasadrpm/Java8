@@ -146,6 +146,20 @@ public class SampleLambdas {
 		/**
 		 * {28=[Arunprasad], 45=[Janani], 29=[Prasad], 30=[Kumar]}
 		 */
+
+		//getting Employee Names based on age greater then 25
+		Map<Integer,String> e3 =
+				employees.stream().filter(EmployeePredicate.getAgePrediate(25)).
+						collect(
+								Collectors.groupingBy(
+										Employee::getAge,
+										Collectors.mapping(
+											Employee::getFirst_Name,
+												Collectors.joining(",","(",")")
+												)
+								)
+						);
+		System.out.println(e3);
 		System.out.println("---------Group by End-----------");
 
 	}

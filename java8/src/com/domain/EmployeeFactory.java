@@ -39,7 +39,7 @@ public class EmployeeFactory {
 		e3.setPhone_Number("+91 9600328267");
 		e3.setEmp_type(EmployeeType.Temporary.toString());
 		e3.setSex(SexType.Male.toString());
-		e3.setAge(30);
+		e3.setAge(28);
 
 		employeeList.add(e3);
 

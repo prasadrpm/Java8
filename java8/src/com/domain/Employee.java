@@ -1,6 +1,8 @@
 package com.domain;
 
+import java.util.Date;
 import java.util.StringJoiner;
+
 
 public class Employee implements Comparable<Employee>{
 //public class Employee {
@@ -19,6 +21,8 @@ public class Employee implements Comparable<Employee>{
 	private String sex;
 
 	private Integer age;
+
+	private Date date_of_birth;
 	
 	public String getId() {
 		return id;
@@ -75,7 +79,15 @@ public class Employee implements Comparable<Employee>{
 		this.age = age;
 	}
 
-	@Override
+    public Date getDate_of_birth() {
+        return date_of_birth;
+    }
+
+    public void setDate_of_birth(Date date_of_birth) {
+        this.date_of_birth = date_of_birth;
+    }
+
+    @Override
 	public String toString() {
 		StringJoiner sj = new StringJoiner(",","{","}");
 		sj.add("id: ").add(this.id).add("firstName : ").add(this.first_Name).
