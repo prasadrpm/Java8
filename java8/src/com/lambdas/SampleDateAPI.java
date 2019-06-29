@@ -35,10 +35,10 @@ public class SampleDateAPI {
     public static void getAge() {
         LocalDate localDate = LocalDate.of(1990, 7, 19);
         //System.out.println(localDate.;
-        Period period = Period.between(LocalDate.now(), localDate);
+        Period period = Period.between(localDate,LocalDate.now());
         System.out.println("how old are you ?" + period.getYears());
     }
 
-    
+
 
 }
