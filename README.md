@@ -1,4 +1,9 @@
-# Java8
+# Java8 New Feartures 
 
-1-Stream API 
-2-Functional Interfaces
+1- Stream 
+
+  	Iterating Stream using foreach() 
+	
+  	sorting operation using Stream
+	
+  	Using proedicates and collectors to filter out the Stream
